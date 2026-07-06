@@ -29,7 +29,8 @@ while True:
             new_student["Age"] = input("Enter Age: ")
             new_student["Grade"] = input("Enter Grade: ")
             new_student["Date of Birth (yyyy-mm-dd)"] = input("Enter Date of Birth (yyyy-mm-dd): ")
-            new_student["subjects"] = input("Enter subjects (comma-separated): ")
+            new_student["subjects"] = input("Enter subjects (comma-separated): ").split(",")
+            
             student.append(new_student)
             found = True
             print("Student added successfully")
@@ -69,7 +70,7 @@ while True:
         if choice == 5:
             print("--------------------------------------")
             for s in student:
-                print(f"{s["subjects"]}")
+                print(f"{s["name"]}{s["subjects"]}")
                 found = True
             if not found:
                 print("No subjects found.")
