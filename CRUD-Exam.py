@@ -28,7 +28,7 @@ while True:
             new_student["name"] = input("Enter name: ")
             new_student["Age"] = input("Enter Age: ")
             new_student["Grade"] = input("Enter Grade: ")
-            new_student["Date of Birth (yyyy-mm-dd)"] = input("Enter Date of Birth (yyyy-mm-dd): ")
+            new_student["Date of Birth (yyyy-mm-dd)"] = tuple(input("Enter Date of Birth (yyyy-mm-dd): "))
             new_student["subjects"] = input("Enter subjects (comma-separated): ").split(",")
             
             student.append(new_student)
@@ -50,7 +50,9 @@ while True:
             for s in student:
                 if s["ID"] == updateID:
                     s["name"] = input("Enter New Name : ")
-                    s["marks"] = input("enter New Marks : ")
+                    s["Age"] = input("enter New Age : ")
+                    s["Grade"] = input("Enter New Grade : ")
+                    s["subjects"] = input("Enter New subjects (comma-separated): ").split(",")
                     found = True
                     print("Student details updated successfully")
                     if not found:
